@@ -1,15 +1,25 @@
 <?php
-# 変数を宣言し代入することができる。
-# 秒単位の時間 $s を、h:m:s の形式へ変換して出力してください。ここで、h は時間、m は 60 未満の分、s は 60 未満の秒とします。
+echo "真偽を出力します\n";
+echo "xの真偽を選択して下さい: true or false :";
+$x_input = trim(fgets(STDIN));
+$x = ($x_input === 'true') ? true : false;
 
-function unko($s) {
-    $h = floor($s / 3600);
-    $m = floor(($s % 3600) / 60);
-    $s = $s % 60;
+echo "yの真偽を選択して下さい: true or false :";
+$y_input = trim(fgets(STDIN));
+$y = ($y_input === 'true') ? true : false;
 
-    echo $h . ":" . $m . ":" . $s;
+function xor_func($x, $y) {
+    if (($x && !$y) || (!$x && $y)) {
+        return true; // x と y のどちらか一方が真の場合
+    } 
+    elseif($x == $y) {
+        return false; // x と y が両方真または両方偽の場合
+    }
+    else{
+        return "入力が違います";
+    }
 }
 
-unko(4210);
-
+echo "結果: ";
+echo $result ? "true\n" : "false\n" : "入力が違います";
 ?>
