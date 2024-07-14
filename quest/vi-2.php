@@ -8,7 +8,7 @@
     $age = fgets(STDIN);
 
 
-function train_fare($age){
+    function train_fare($age){
         if(6 > $age){
             return "0";
         }
@@ -18,7 +18,7 @@ function train_fare($age){
         elseif(12 <= $age){
             return "200";
         }
-}
+    }
     echo "あなたの電車賃は" . train_fare($age) . "円です。";
     
 ?>
