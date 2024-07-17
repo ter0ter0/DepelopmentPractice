@@ -10,12 +10,12 @@ class VendingMachine //設計図
     } 
 
     public function pressManufacturerName(){ //メンバメソッド（操作）
-        //echo "メーカー名確認ボタンを押します。\n"."メーカー名は"
+        echo "メーカー名確認ボタンを押します。\n"."メーカー名は"
     }
     
 
     public function __construct($makerName){ //インストラクタ時に実行される関数。//コンストラクタ
-        $this->pressManufacturerName = $makerName;
+        $this->$makerName = pressManufacturerName;
 
                 
     }
@@ -28,11 +28,14 @@ class VendingMachine //設計図
 }
 
 $VendingMachine = new VendingMachine("サントリー"); //クラスをオブジェクト化して使用（動的）。
+
 $VendingMachine->juice = 20; //juiceの本数は20本。
-print_r($VendingMachine); //$drinkを呼び出す。
+
+print_r($VendingMachine); //クラスを見える化する。
 echo "\n"; //出力する。
-echo $VendingMachine->pressButton();
-echo $VendingMachine->pressManufacturerName();
+
+$VendingMachine->pressButton();
+$VendingMachine->pressManufacturerName();
 
 
 ?>
