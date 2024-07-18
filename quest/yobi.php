@@ -1,11 +1,18 @@
 <?php
+class Goku {
+  public function skill($name, $damage){
+    print "名前 = {$name} : ダメージ = {$damage}". '<br>'; 
+  }
+}
 
-$a = [1,2,3];
-$b = $a;
-$a[0] = 'a';
-$b[2] = 'c';
 
-var_dump($a);
-var_dump($b);
+class Gohan extends Goku {
 
+  }
+
+  $dragonball = new Goku();
+  $dragonball->skill('かめはめ波', '500');
+  $dragonballZ = new Gohan();
+  $dragonballZ->skill('かめはめ波', '500');
+   
 ?>

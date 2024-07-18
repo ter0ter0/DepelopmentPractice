@@ -56,10 +56,16 @@ class Item {
 
 # カップコーヒークラス
 class CupCoffee extends Item {
-    public function __construct($name, $price) {
-        parent::__construct($name, $price);
-    }
+
 }
+
+
+class Snack extends Item{
+}
+
+
+
+
 
 # クラスのインスタンス化
 $vendingMachine = new VendingMachine("サントリー");
@@ -67,17 +73,21 @@ $cola = new Item("cola", 150);
 $cider = new Item("cider", 100);
 $hotCupCoffee = new CupCoffee("hot",200);
 $iceCupCoffee = new CupCoffee("ice",150);
+$snack = new Snack("potate",150);
 
 //お金を入れる
 $vendingMachine->depositCoin(100);
 $vendingMachine->depositCoin(100);
 $vendingMachine->depositCoin(100);
 $vendingMachine->depositCoin(100);
-
-//ドリンクを出す。
+$vendingMachine->depositCoin(100);
+$vendingMachine->depositCoin(100);
+$vendingMachine->depositCoin(100);
+//商品を出す。
 echo $vendingMachine->pressButton($cola);
 echo $vendingMachine->pressButton($hotCupCoffee);
 echo $vendingMachine->pressButton($iceCupCoffee);
+echo $vendingMachine->pressButton($snack);
 
 //カップを追加する。
 $vendingMachine->addCups(5);
