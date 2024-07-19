@@ -19,8 +19,6 @@ class VendingMachine //設計図　自販機を作る。
         }
     } 
 
-    
-
     //ドリンクのブランドを出す関数。
     private function pressDrinkName(){ 
         return $this->drinkName; //このメソッドが呼び出されると、drinkName プロパティの値を返す。
@@ -39,9 +37,6 @@ class VendingMachine //設計図　自販機を作る。
 
     }
 
-
-    
-
     #コンストラクタ
     public function __construct($drinkName) { //インストラクタ時に実行される関数。コンストラクタ。($drinkName): インスタンスを作成するときに渡される引数。
        $this->drinkName  = $drinkName; //クラスのプロパティ drinkName に、渡された $drinkName を設定します。
@@ -54,7 +49,7 @@ $VendingMachine = new VendingMachine("サントリー"); //このコードによ
 //コンストラクタ出力
 echo "ブランドネームは". $VendingMachine->pressDrinkName(). "です。\n"; //このコードを実行すると、インスタンス作成時に設定された drinkName（例では "サントリー"）が返され、出力される。
 
-//通常出力
+#通常出力
 $VendingMachine->drink = "ジュース"; //drinkの種類はジュース。
 //$VendingMachine-> pressButton(); //pressButtonの関数を実行する。
 $VendingMachine-> depositCoin(100);//depositCoinの関数を実行する。()は引数。
@@ -63,5 +58,5 @@ echo $VendingMachine->pressButton();//pressButtonを出力する。
 
 
 print_r($VendingMachine); //インスタンスを見える化する。
-echo "\n"; //出力する。
+echo "\n"; //改行する。
 ?>
