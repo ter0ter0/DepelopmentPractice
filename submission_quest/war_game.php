@@ -5,7 +5,7 @@ class Card {
     public $suit; // トランプのマーク
     public $num;  // トランプの数字
 
-    public function __construct($a, $b) {
+    public function __construct($a, $b) {//インスタンス時に生まれる。ばぶー
         $this->suit = $a; // $aに入れたものが$suit(マーク)になる
         $this->num = $b;  // $bに入れたものが$num(数字)になる
     }
@@ -22,8 +22,8 @@ class Deck {
 
     public function __construct() {
         $suits = ["ハート", "ダイヤ", "スペード", "クローバー"];
-        foreach ($suits as $suit) {
-            for ($num = 1; $num <= 13; $num++) {
+        foreach ($suits as $suit) {//suitにマークが入るじゃん？それを↓
+            for ($num = 1; $num <= 13; $num++) {//1~13作成して各マークに入れる。
                 $this->deck[] = new Card($suit, $num); // カードをデッキに入れる
             }
         }
@@ -49,7 +49,7 @@ class Player {
         return array_shift($this->hand);
     }
 
-    public function addCards($deck) {
+    public function addCards($deck) {//カードを追加していく。はず
         $this->hand = array_merge($this->hand, $deck);
     }
 }
@@ -61,7 +61,7 @@ function playWar($player1, $player2) {
 
    
 
-    while (count($player1->hand) > 0 && count($player2->hand) > 0) { // どちらかの手札がなくなるまで繰り返す
+    while (count($player1->hand) > 0 && count($player2->hand) > 0) { // どちらかの手札がなくなるまで繰り返す。はず
         echo "戦争\n";
 
         // プレイヤークラスのメソッドを発動し$cardにぶち込む
