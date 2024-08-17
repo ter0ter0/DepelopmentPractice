@@ -28,7 +28,8 @@
                             <img src="<?php echo $item->getImage() ?>" alt="<?php echo $item->getName() ?>">
                             <p><?php echo $item->getPrice()."円" ?></p>
                             <input type="text" value=0 name="<?php echo $item->getName() ?>">
-                            <span>枚</span>
+                            <span>点</span>
+                            
                         </div>
                     <?php endforeach ?>  
                     

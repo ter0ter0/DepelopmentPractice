@@ -6,6 +6,8 @@ class Menu{
     public $price;
     public $image;
     public $orderCount = 0;
+    // public $totalPrice = 0;
+   
     
     public function __construct($name,$price,$image){
         $this->name = $name;
@@ -26,16 +28,25 @@ class Menu{
         return "image/".$this->image;
     }
 
-
-
     public function getOrderCount(){
         return $this->orderCount;
     }
 
- 
     public function setOrderCount($orderCount){
         $this->orderCount = $orderCount;
     }
+
+    public function getItemsPrice(){
+        return (int)$this->getPrice() * (int)$this->orderCount;
+    }
+
+    // public function getTotalPrice(){
+    //     return $this->totalPrice =+ $this->getItemsPrice();
+    // }
+
+ 
+
+  
 
  
 
