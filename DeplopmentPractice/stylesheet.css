@@ -5,6 +5,22 @@
     display: inline-block;
 }
 
+.item-name{
+
+    width: 160px;
+    height: 48px;
+    line-height: 48px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border-style: none;
+    color: white;
+    background-color: #42c7c1;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    margin-top: 30px;
+
+}
+
 input {
     margin-left: 20px;
     margin-right: 10px;
@@ -27,4 +43,5 @@ input[type="submit"] {
     background-color: #42c7c1;
     font-size: 15px;
     letter-spacing: 0.1em;
+    margin-top: 30px;
 }
