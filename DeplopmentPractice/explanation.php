@@ -11,8 +11,6 @@ class Explanation{
     public function getExplanation(){
         return $this->explanation1;
     }
-
-
 }
 
 ?> -->

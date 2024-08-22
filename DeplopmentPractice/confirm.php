@@ -24,19 +24,9 @@
                     <?php echo $item->getItemsPrice()." "."円" ?>
                     <?php $totalCount += (int)$item->getOrderCount(); ?>
                     <?php $totalPrice += (int)$item->getItemsPrice(); ?>
-                    
-                            
-            
-
                 </p>
         <?php endforeach ?>
         <?php echo "合計で".$totalCount."枚、"." ".$totalPrice." "."円です。" ?>
-        
-      
-        <!-- <?php echo $totalPrice ?> -->
-      
-      
-
     </div>
     
 </body>
