@@ -1,5 +1,6 @@
 <?php require_once("data.php") ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,19 +11,27 @@
 <body>
     <div class="oder-Wrapper">
         <h2>注文内容確認</h2>
+        <?php $totalPrice = 0 ?> 
+        <?php $totalCount = 0 ?>
+       
         <?php foreach($items as $item): ?>
+            
             <?php $orderCount = $_POST[$item->getName()] ?>
                 <p class="order-price">
-                    <?php echo $item->getName() ?>
-                    <?php echo $orderCount." "."枚" ?>
-                
-
-
-
+                    <?php echo $item->getName()." "."×" ?>
+                    <?php $item->setOrderCount($orderCount) ?>
+                    <?php echo $item->getOrderCount()." "."点" ?>
+                    <?php echo $item->getItemsPrice()." "."円" ?>
+                    <?php $totalCount += (int)$item->getOrderCount(); ?>
+                    <?php $totalPrice += (int)$item->getItemsPrice(); ?>
                 </p>
         <?php endforeach ?>
-
+        <?php echo "合計で".$totalCount."枚、"." ".$totalPrice." "."円です。" ?>
     </div>
+
+    <a href="index.php?name=メニューページ">
+            <h3>メニューページへ戻る</h3>
+    </a>
     
 </body>
 </html>
