@@ -16,9 +16,7 @@
         <h1 class="shop">Shopping Start!</h1>
             <div class="menu">
                 <h2>Mens Fashion</h2>  
-               
-                
-                 
+
             </div>
             
             <form method="post" action="confirm.php">
@@ -27,24 +25,16 @@
                         <div class="item-menu">
                             <a href="show.php?name=<?php echo $item->getName() ?>" class="item-name">
                                 <?php echo $item->getName() ?>
-                                
                             </a>
                             <img src="<?php echo $item->getImage() ?>" alt="<?php echo $item->getName() ?>">
                             <p><?php echo $item->getPrice()."円" ?></p>
                             <input type="text" value=0 name="<?php echo $item->getName() ?>">
-                            <span>点</span>
-                            
+                            <span>点</span>    
                         </div>
                     <?php endforeach ?>  
-                    
                 </div>
-                
                 <input type="submit" value="注文する"> 
-            
             </form>
-            
-            
     </div>
-
 </body>
 </html>

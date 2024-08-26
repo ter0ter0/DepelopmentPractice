@@ -28,6 +28,10 @@
         <?php endforeach ?>
         <?php echo "合計で".$totalCount."枚、"." ".$totalPrice." "."円です。" ?>
     </div>
+
+    <a href="index.php?name=メニューページ">
+            <h3>メニューページへ戻る</h3>
+    </a>
     
 </body>
 </html>
